@@ -10,6 +10,9 @@ import { FordComponent } from './pages/ford/ford.component';
 import { AudiComponent } from './pages/audi/audi.component';
 import { HomeComponent } from './pages/home/home.component';
 import { Error404Component } from './pages/error404/error404.component';
+import { CarsComponent } from './main-components/cars/cars.component';
+import { IcarsService } from './models/icars.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,12 +24,14 @@ import { Error404Component } from './pages/error404/error404.component';
     AudiComponent,
     HomeComponent,
     Error404Component,
+    CarsComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [IcarsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

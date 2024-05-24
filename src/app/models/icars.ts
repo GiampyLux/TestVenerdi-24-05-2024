@@ -1,5 +1,3 @@
-export type Root = Icars[]
-
 export interface Icars {
   brand: string
   brandLogo: string
